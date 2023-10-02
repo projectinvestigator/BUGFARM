@@ -9,7 +9,7 @@ We propose BugFarm, to transform arbitrary code into multiple complex bugs. BugF
 Please download the required datasets to reproduce our experiments from [Zenodo](https://doi.org/10.5281/zenodo.8388299).
 
 ## Dependencies
-All experiments require Python 3.7 (some experiments may need a higher version, i.e., when using OpenAI API) and a Linux/Mac OS. Please execute the following to install dependencies and download the projects:
+All experiments require Python 3.9 and a Linux/Mac OS. Please execute the following to install dependencies and download the projects:
 
 `sudo bash setup.sh`
 
