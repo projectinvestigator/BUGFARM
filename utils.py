@@ -289,7 +289,7 @@ def adjust_tokens(bpe_tokens, java_tokens_types, attentions):
 
     while code_index < len(java_tokens):
 
-        if bpe_tokens[bpe_index] in ['<s>', '</s>', '\n']:
+        if bpe_tokens[bpe_index] in ['<s>', '</s>']:
             bpe_index += 1
             continue
 

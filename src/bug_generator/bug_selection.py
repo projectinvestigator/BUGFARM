@@ -167,13 +167,17 @@ def main(args):
 
             delta = difflib.unified_diff(f1, f2, fromfile='original', tofile='current')
 
+            check = True
             for line in delta:
                 if not line.strip().startswith('+++') and line.strip().startswith('+'):
                     changed_added_stmt = line.strip()[1:].strip()
                     for idx in least_attended_stmts:
-                        if ''.join(idx[1][0].strip().split()) == ''.join(changed_added_stmt.split()) and bug_num+1 not in dct['selected_bugs']:
-                            dct['selected_bugs'].append(bug_num+1)
-                            stats['total_selected_bugs'] += 1
+                        if ''.join(idx[1][0].strip().split()) != ''.join(changed_added_stmt.split()):
+                            check = False
+
+            if check and bug_num+1 not in dct['selected_bugs']:
+                dct['selected_bugs'].append(bug_num+1)
+                stats['total_selected_bugs'] += 1
         
         json_file.write(json.dumps(dct) + '\n')
         json_file.flush()
