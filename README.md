@@ -120,3 +120,9 @@ private void handleOption(Option option) throws ParseException {
 
 ### selected bugs
 bug 1,2,3
+
+## Ablation Study (Necessity of Prompt Engineering)
+
+The quality of prompts significantly impacts the quality of the model’s response; the more context you provide to the model in the prompt, the better the response it produces. The following figures show different kinds of bugs generated without prompt engineering:
+
+![alt text](misc/prompts.png)
