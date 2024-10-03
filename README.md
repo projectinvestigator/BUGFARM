@@ -1,4 +1,4 @@
-# Automated Generation of Complex Bugs in the Machine Learning Era
+# Challenging Bug Prediction and Repair Models with Synthetic Bugs
 Anonymous artifact repository of BUGFARM.
 
 ## Abstract
